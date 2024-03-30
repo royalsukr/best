@@ -13,6 +13,8 @@
   <style>
     *{
       font-family: "Roboto", sans-serif;
+      font-weight: 500;
+      font-size: large;
     }
 
 
@@ -73,11 +75,35 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+body {
+  background-color: black;
+  color: white;
+
+}
+
+.dark-mode {
+  background-color: white;
+  color:  black;
+}
+
+button{
+    background-image: linear-gradient(to right,#8AD4EC,#EF96FF,#FF5CAC,#FFAA6C);
+}
 
   </style>
-<header class="bg-black flex flex-col w-[100%] h-[100vh] bg-cover">
 
-  <div class="flex  justify-center text-white pt-[40px] pr-[90px]">
+<script>
+  function myFunction() {
+     var element = document.body;
+     element.classList.toggle("dark-mode");
+  }
+  </script>
+
+
+<header class="flex flex-col w-[100%] h-[100vh] bg-cover">
+  <p class="text-white flex  text-[40px]" onclick="myFunction()"><i class="fa-solid fa-lightbulb" style="color: #74C0FC;"></i></p>
+
+  <div class="flex  justify-center  pt-[40px] pr-[90px]">
     <a class="w-[81px]"  href="wallet.html"><i class="fa-solid fa-chevron-left"></i></a>
     <p >Import From Seed</p>
   </div>
@@ -101,7 +127,7 @@ input:checked + .slider:before {
   </div>
 
 <div class="flex items-center justify-between pt-[40px]">
-  <p class="ml-[20px] text-white">Sign in with Face ID?</p>
+  <p class="ml-[20px] ">Sign in with Face ID?</p>
  <div class="mr-[20px]">
   <label class="switch">
     <input type="checkbox">
@@ -113,7 +139,9 @@ input:checked + .slider:before {
 
   <p class="text-gray-400 w-[330px] ml-[20px] pt-[20px]">By proceeding, you agree to these <a class="underline text-blue-400" href="">Term and Conditions.</a></p>
 
-  <div><button class="rounded-3xl w-[90%] bg-[#101419] text-gray-400 mt-[20px]  ml-[20px] px-[100px] py-[12px] "><a class="" href="">Import</a></button></div>
+  <div><button class="rounded-3xl w-[90%] bg-[#101419] text-white  mt-[20px]  ml-[20px] px-[100px] py-[12px] "><a class="" href="SecureWallet.html">Import</a></button></div>
+
+ 
 
 </header>
 </body>
